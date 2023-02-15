@@ -32,7 +32,7 @@ internal object LogListDataSourceFactory {
         val okHttpClient = OkHttpClient.Builder().addInterceptor(MaxSizeInterceptor()).cache(null).build()
 
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://www.gstatic.com/ct/log_list/v2/")
+            .baseUrl("https://www.gstatic.com/ct/log_list/v3/")
             .addConverterFactory(ByteArrayConverterFactory())
             .client(okHttpClient)
             .build()
